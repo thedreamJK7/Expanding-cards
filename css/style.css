@@ -1,0 +1,84 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    display: flex;
+    width: 90vw;
+}
+
+.panel {
+    flex: 0.5;
+    height: 80vh;
+    background-size: cover;
+    overflow: hidden;
+    margin: 0 10px;
+    border-radius: 50px;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+}
+
+.panel.active::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 120px;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.321);
+    transition: 1s;
+}
+
+
+.panel h1 {
+    position: absolute;
+    bottom: 50px;
+    left: 50px;
+    opacity: 0;
+    font-family: sans-serif;
+    color: white;
+    z-index: 10;
+    transition: 1s;
+}
+
+.panel.active h1 {
+    opacity: 1;
+}
+
+.panel.active {
+    flex: 3;
+    transition: 1s;
+    background-position: top;
+}
+
+.ronny {
+    background-image: url(../img/cristiano_ronaldo_2013_photo_13.jpg);
+}
+
+.messi {
+    background-image: url(../img/7eacac4972e5844d594a7f7bb48ddf7b.jpg);
+}
+
+.jr {
+    background-image: url(../img/a6a80de00611473f278fb985b94df8be.jpg);
+}
+
+.karim {
+    background-image: url(../img/download-50-1.png);
+}
+
+.salah {
+    background-image: url(../img/9325c540911eba284d03e1d88bea4.jpeg);
+}
+
